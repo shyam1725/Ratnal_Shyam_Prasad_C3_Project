@@ -64,5 +64,11 @@ class RestaurantTest {
         assertEquals(388, restaurant.calculateOrderValue(itemNames));
         //Calculating  order value by adding price of each selected menu items
     }
+
+    @Test
+    public void getting_order_total_when_itemNames_empty() {
+        List<String> itemNames = new ArrayList<>();
+        assertEquals(0, restaurant.calculateOrderValue(itemNames));
+    }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 }
